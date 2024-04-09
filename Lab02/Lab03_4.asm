@@ -53,10 +53,10 @@ soma_matriz proc
         xor si, si;indice da coluna
         mov cl, 3; conta coluna
     soma_caractere:
-        mov ax,m1[bx][si];colocando oque esta em m1 em ax
-        mov soma[bx][si],ax;movendo oque esta em ax para soma
-        mov ax,m2[bx][si]; movendo oque esta em m2 para ax
-        add soma[bx][si],ax;somando oque esta em ax com oque esta em soma
+        mov ax,[m1[bx][si]];colocando oque esta em m1 em ax
+        mov [soma[bx][si]],ax;movendo oque esta em ax para soma
+        mov ax,[m2[bx][si]]; movendo oque esta em m2 para ax
+        add [soma[bx][si]],ax;somando oque esta em ax com oque esta em soma
         inc si;passa para o proximo item
         dec cl;decrementa o contador de coluna
         jnz soma_caractere
