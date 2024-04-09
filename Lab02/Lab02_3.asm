@@ -49,7 +49,6 @@ reversor endp
 print_array proc
 
     IMPRIME:
-       
         mov dl, vetor[bx]; movendo o que esta na posicao do vetor para dl
         or dl, 30h ;transformando em caractere
         mov ah,02h;funcao para printar

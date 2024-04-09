@@ -32,6 +32,7 @@ imprime_matriz proc
         mov cl, 3; contador coluna
     imprime_linha:
         mov dl, soma[bx][si];movendo oque esta na posicao bx si na matriz para dl
+        or dl, 30h;transformando o numero em caractere
         mov ah,02h;imprimindo o que esta dentro da matriz
         int 21h
         inc si;passando para o proximo item
