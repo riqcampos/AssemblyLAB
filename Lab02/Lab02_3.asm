@@ -7,7 +7,7 @@ TITLE Inversor de vetor dentro de O(1)
 .code
     main proc
         mov ax, @data
-        mov ds, ax ;permitindo o acesso as variaveis em .data
+        mov ds, ax ;permitindo o acesso as variaveis em data
         lea bx, vetor ;apontando para a primeira posicao do vetor
         mov cx, tamanho ;iniciando o contador para o tamanho do vetor
         call read_array ;chamando procedimento para ler os valores do array
